@@ -2,6 +2,7 @@
 //src/components/layout.js
 import * as React from 'react'
 import { subZero, useAsciiText } from 'react-ascii-text'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 
 
 const Layout = () => {
@@ -33,7 +34,18 @@ const Layout = () => {
         fontWeight: 'bold',
         textAlign: 'center',
         marginTop: '10vh',
+        padding: '10vw',
     }
+
+    const codeString = `
+    // Here are some examples of Rust code.
+    fn main() {
+        // Statements here are executed when the compiled binary is called.
+
+        // Print text to the console.
+        println!("Hello World!");
+    }
+    `
 
     return (
         <div class="pagewrapper">
@@ -43,6 +55,9 @@ const Layout = () => {
             </header>
             <main style={main_style}>
                 <span>More to come soon...</span>
+                <SyntaxHighlighter language="rust">
+                    {codeString}
+                </SyntaxHighlighter>
             </main>
         </div>
     )
