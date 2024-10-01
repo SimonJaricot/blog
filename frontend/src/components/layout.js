@@ -22,13 +22,14 @@ const Layout = () => {
     const header_style = {
         fontFamily: 'monospace',
         fontSize: '2vw',
+        fontWeight: 'bold',
         textAlign: 'center',
         marginTop: '5vh',
     }
 
     const main_style = {
         fontFamily: 'monospace',
-        fontSize: '1.5vw',
+        fontSize: '24px',
         fontWeight: 'bold',
         textAlign: 'center',
         marginTop: '10vh',
